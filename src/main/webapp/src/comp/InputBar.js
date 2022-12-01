@@ -26,7 +26,7 @@ const InputBar = () => {
                       onChange={(e) => setPost({...post, [e.target.name]: e.target.value})}
             />
             <button className="button is-link"
-                    onClick={() => Service.clickAddPost(post)}
+                    onClick={() => Service.addPost(post)}
             >Create<
             /button>
         </div>

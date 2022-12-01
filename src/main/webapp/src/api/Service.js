@@ -9,7 +9,7 @@ export default class Service {
         window.location.reload()
     }
 
-    static clickAddPost = async (post) => {
+    static addPost = async (post) => {
         await Service.request.post("/add", post)
             .then((response) => {
                 console.log(response.data)
