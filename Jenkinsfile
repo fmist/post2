@@ -9,7 +9,7 @@ pipeline {
 
         stage('Get project from github') {
             steps {
-                git 'https://github.com/fmist/post.git'
+                git 'https://github.com/fmist/post2.git'
             }
         }
 
