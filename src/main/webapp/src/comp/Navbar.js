@@ -4,11 +4,12 @@ const Navbar = () => {
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item">
-                    <img src="https://bulma.io/images/bulma-logo.png"
-                         alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112"
-                         height="28"/>
-                </a>
+                <p className="navbar-item">
+                    <img src="https://www.logolynx.com/images/logolynx/c2/c26ce7049f69095859336e866f22f709.png"
+                         alt="post manager"
+                         width="80"
+                         height="50"/>Postmanager
+                </p>
             </div>
         </nav>
     );
