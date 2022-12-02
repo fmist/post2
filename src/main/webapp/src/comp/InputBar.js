@@ -14,7 +14,7 @@ const InputBar = () => {
         <div className="container is-max-desktop">
             <input className="input is-small"
                    type="text"
-                   placeholder="Set title"
+                   placeholder="Set titleasdasdasd"
                    name="title"
                    value={title}
                    onChange={(e) => setPost({...post, [e.target.name]: e.target.value})}
