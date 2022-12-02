@@ -22,17 +22,22 @@ const InputBar = () => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="container is-max-desktop">
-                <div className="container mt-2">
-                <input className="input is-normal"
-                       type="text"
-                       placeholder="Set title"
-                       name="title"
-                       value={title}
-                       onChange={(e) => setPost({...post, [e.target.name]: e.target.value})}
-                />
-                {frontError && title.length < 3 ?
-                    <label >Title must be 3 chars or more</label> : ""
-                }
+                <div className="container">
+                    <div className="field">
+                        <label className="title">Create post</label>
+                        <div className="control">
+                            <input className="input"
+                                   autoFocus
+                                   type="text"
+                                   placeholder="Set title"
+                                   name="title"
+                                   value={title}
+                                   onChange={(e) => setPost({...post, [e.target.name]: e.target.value})}
+                            />
+                        {frontError && title.length < 3 ?
+                            <p className="help is-danger">Title must be 3 chars or more</p> : ""
+                        }
+                    </div>
                 </div>
                 <div className="container mt-2">
                 <textarea className="textarea is-normal"
@@ -42,8 +47,9 @@ const InputBar = () => {
                           onChange={(e) => setPost({...post, [e.target.name]: e.target.value})}
                 />
                 {frontError && text.length < 1 ?
-                    <label>Text must be 1 char or more</label> : ""
+                    <p className="help is-danger">Text must be 1 char or more</p> : ""
                 }
+                </div>
                 </div>
                 <br/>
                 <button className="button is-link mt-auto"

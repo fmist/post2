@@ -2,6 +2,8 @@ import axios from "axios";
 
 export default class Service {
     static request = axios.create({baseURL: "http://localhost:8081"})
+    static serverTitleError
+    static serverTextError
 
     static deletePost = async (id) => {
         await Service.request.post(`/delete/${id}`)
@@ -14,6 +16,15 @@ export default class Service {
             .then((response) => {
                 console.log(response.data)
                 window.location.reload()
+            }).catch(error => {
+                error.response.data.fieldErrors.forEach(fieldError => {
+                    if (fieldError.field === 'title') {
+                        Service.serverTitleError = fieldError.message
+                    }
+                    if (fieldError.field === 'text') {
+                        Service.serverTextError = fieldError.message
+                    }
+                })
             })
     }
 }
