@@ -31,7 +31,7 @@ const InputBar = () => {
                        onChange={(e) => setPost({...post, [e.target.name]: e.target.value})}
                 />
                 {frontError && title.length < 3 ?
-                    <label>Title must be 3 chars or more</label> : ""
+                    <label >Title must be 3 chars or more</label> : ""
                 }
                 </div>
                 <div className="container mt-2">
