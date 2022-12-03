@@ -14,7 +14,7 @@ const PostList = () => {
     }, [])
 
     return (
-        <table className="table table-striped">
+        <table className="table table-striped container modal-fullscreen">
             <thead>
             <tr>
                 <th>Id</th>
@@ -33,7 +33,7 @@ const PostList = () => {
                         <td>{posts.text}</td>
                         <td>{posts.time}</td>
                         <td className="text-right">
-                            <button className="btn"
+                            <button className="btn btn-outline-secondary"
                                     onClick={() => Service.deletePost(posts.id)}
                             >Delete
                             </button>

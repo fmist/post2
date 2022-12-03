@@ -2,8 +2,6 @@ import axios from "axios";
 
 export default class Service {
     static request = axios.create({baseURL: "http://192.168.0.101:8081"})
-    static serverTitleError
-    static serverTextError
 
     static deletePost = async (id) => {
         await Service.request.post(`/delete/${id}`)

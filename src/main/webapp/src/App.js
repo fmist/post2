@@ -1,5 +1,5 @@
 import './App.css';
-import "halfmoon/css/halfmoon.min.css"
+import "bootstrap/dist/css/bootstrap.css"
 import Navbar from "./comp/Navbar";
 import PostList from "./comp/PostList";
 import InputBar from "./comp/InputBar";
