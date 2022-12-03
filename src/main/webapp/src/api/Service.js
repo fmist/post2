@@ -16,15 +16,6 @@ export default class Service {
             .then((response) => {
                 console.log(response.data)
                 window.location.reload()
-            }).catch(error => {
-                error.response.data.fieldErrors.forEach(fieldError => {
-                    if (fieldError.field === 'title') {
-                        Service.serverTitleError = fieldError.message
-                    }
-                    if (fieldError.field === 'text') {
-                        Service.serverTextError = fieldError.message
-                    }
-                })
             })
     }
 }
