@@ -8,20 +8,14 @@ import java.time.format.DateTimeFormatter;
 
 @Entity
 public class Post {
+    LocalDateTime timeCreated;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     private Long id;
-    @Column(name = "title")
     @NotNull(message = "Title can't be empty")
-    @Size(min = 3, message = "Title must be 3 chars or more")
     private String title;
-    @Column(name = "text")
     @NotNull(message = "Text can't be empty")
-    @Size(min = 1, message = "Text must be 1 or more chars")
     private String text;
-
-    LocalDateTime timeCreated;
 
     @PrePersist
     @PreUpdate
