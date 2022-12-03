@@ -17,7 +17,7 @@ services:
       context: src/main/webapp
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "8081:3000"
     image: 'frontend'
     depends_on:
       - rest
