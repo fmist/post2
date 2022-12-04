@@ -14,7 +14,7 @@ const PostList = () => {
     }, [])
 
     return (
-        <table className="table table-striped container modal-fullscreen">
+        <table className="table table-striped container modal-fullscreen border">
             <thead>
             <tr>
                 <th>Id</th>

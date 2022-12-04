@@ -28,34 +28,32 @@ const InputBar = () => {
     });
 
     return (
-        <form className="container w-25 mt-2"
+        <form className="container w-25 mt-3 border "
               onSubmit={formik.handleSubmit}>
-            <div className="form-group mt-2">
+            <form>
             <input
-                className="form-control"
+                className="form-control mt-2"
                 placeholder="Set title"
                 id="title"
                 name="title"
                 type="text"
-                required
                 onChange={formik.handleChange}
                 value={formik.values.title}
             />
-            {formik.errors.title ? <div style={{color: "red"}}>{formik.errors.title}</div> : null}
-
-
+            {formik.errors.title ? <p style={{color: "red", fontSize: "small"}}>{formik.errors.title}</p> : null}
+            </form>
+            <form>
             <textarea
-                className="form-control mt-2"
+                className="form-control mt-3"
                 placeholder="Set text"
                 id="text"
                 name="text"
                 onChange={formik.handleChange}
                 value={formik.values.text}
-                required
             />
-                {formik.errors.text ? <div style={{color: "red"}}>{formik.errors.text}</div> : null}
-            </div>
-            <input className="btn btn-primary btn-block mt-2"
+                {formik.errors.text ? <p style={{color: "red", fontSize: "small"}}>{formik.errors.text}</p> : null}
+            </form>
+            <input className="btn btn-primary btn-block mt-1"
                    type="submit"
                    value="Create"/>
         </form>

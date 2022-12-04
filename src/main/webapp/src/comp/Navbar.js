@@ -1,13 +1,12 @@
-import React from 'react';
+import React, {useRef} from 'react';
 
 const Navbar = () => {
     return (
         <nav className="navbar navbar-light bg-secondary">
             <div className="container-fluid">
-                <a className="navbar-brand"
-                   href="/"
+                <h3 className="navbar-brand text-center"
                    style={{color: "whitesmoke"}}
-                >Postmanager</a>
+                >Postmanager</h3>
             </div>
         </nav>
     );
