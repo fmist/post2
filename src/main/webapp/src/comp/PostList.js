@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Service from "../api/Service";
+import {Button, Table} from "react-bootstrap";
 
 const PostList = () => {
 
@@ -14,14 +15,14 @@ const PostList = () => {
     }, [])
 
     return (
-        <table className="table table-striped container modal-fullscreen border">
+        <Table striped bordered hover>
             <thead>
             <tr>
                 <th>Id</th>
                 <th>Title</th>
                 <th>Text</th>
                 <th>Updated</th>
-                <th className="text-right">Action</th>
+                <th className="text-lg-e">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -33,16 +34,16 @@ const PostList = () => {
                         <td>{posts.text}</td>
                         <td>{posts.time}</td>
                         <td className="text-right">
-                            <button className="btn btn-outline-secondary"
+                            <Button variant="secondary"
                                     onClick={() => Service.deletePost(posts.id)}
                             >Delete
-                            </button>
+                            </Button>
                         </td>
                     </tr>
                 ))
             }
             </tbody>
-        </table>
+        </Table>
     );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useFormik} from "formik";
 import Service from "../api/Service";
+import {Button, Form, InputGroup} from "react-bootstrap";
 
 const validate = values => {
     const errors = {};
@@ -28,35 +29,41 @@ const InputBar = () => {
     });
 
     return (
-        <form className="container w-25 mt-3 border "
-              onSubmit={formik.handleSubmit}>
-            <form>
-            <input
-                className="form-control mt-2"
-                placeholder="Set title"
-                id="title"
-                name="title"
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.title}
-            />
-            {formik.errors.title ? <p style={{color: "red", fontSize: "small"}}>{formik.errors.title}</p> : null}
-            </form>
-            <form>
-            <textarea
-                className="form-control mt-3"
-                placeholder="Set text"
-                id="text"
-                name="text"
-                onChange={formik.handleChange}
-                value={formik.values.text}
-            />
-                {formik.errors.text ? <p style={{color: "red", fontSize: "small"}}>{formik.errors.text}</p> : null}
-            </form>
-            <input className="btn btn-primary btn-block mt-1"
-                   type="submit"
-                   value="Create"/>
-        </form>
+        <Form
+            onSubmit={formik.handleSubmit}
+            noValidate
+        >
+            <div className="container mt-2">
+                <InputGroup hasValidation>
+                    <Form.Control
+                        placeholder="Set title"
+                        id="title"
+                        name="title"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.title}
+                        isInvalid={!!formik.errors.title}
+                    />
+                    <Form.Control.Feedback type="invalid">{formik.errors.title}</Form.Control.Feedback>
+                </InputGroup>
+                <InputGroup hasValidation className="mt-2">
+                    <Form.Control
+                        placeholder="Set text"
+                        id="text"
+                        name="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.text}
+                        isInvalid={!!formik.errors.text}
+                    />
+                    <Form.Control.Feedback type="invalid">{formik.errors.text}</Form.Control.Feedback>
+                </InputGroup>
+                <Button className="btn btn-primary btn-block mt-1"
+                       type="submit"
+                       value="Create">
+                    Create
+                </Button>
+            </div>
+        </Form>
     );
 };
 
