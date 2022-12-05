@@ -1,13 +1,13 @@
 import './App.css';
 import "bootstrap/dist/css/bootstrap.css"
-import Navbar from "./comp/Navbar";
+import Bar from "./comp/MenuBar";
 import PostList from "./comp/PostList";
 import InputBar from "./comp/InputBar";
 
 function App() {
     return (
         <div className="App">
-            <Navbar/>
+            <Bar/>
             <PostList/>
             <InputBar/>
         </div>

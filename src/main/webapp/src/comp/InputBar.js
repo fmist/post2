@@ -1,7 +1,7 @@
 import React from 'react';
 import {useFormik} from "formik";
 import Service from "../api/Service";
-import {Button, Form, InputGroup} from "react-bootstrap";
+import {Button, Container, Form, InputGroup} from "react-bootstrap";
 
 const validate = values => {
     const errors = {};
@@ -33,7 +33,6 @@ const InputBar = () => {
             onSubmit={formik.handleSubmit}
             noValidate
         >
-            <div className="container mt-2">
                 <InputGroup hasValidation>
                     <Form.Control
                         placeholder="Set title"
@@ -62,7 +61,6 @@ const InputBar = () => {
                        value="Create">
                     Create
                 </Button>
-            </div>
         </Form>
     );
 };
