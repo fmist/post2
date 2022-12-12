@@ -5,7 +5,6 @@ import {Button, Table} from "react-bootstrap";
 const PostList = () => {
 
     const [posts, setPosts] = useState([])
-
     useEffect(() => {
         Service.request.get("/")
             .then(response => {
