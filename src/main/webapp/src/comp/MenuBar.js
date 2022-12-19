@@ -7,8 +7,9 @@ const MenuBar = () => {
             <Container>
                 <Navbar.Brand>Postmanager</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/">Posts</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
+                    <Nav.Link href="/add">New post</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
