@@ -23,7 +23,7 @@ const PostList = () => {
                 <th>Title</th>
                 <th>Text</th>
                 <th>Updated</th>
-                <th className="text-lg-e">Action</th>
+                <th>Action</th>
             </tr>
             </thead>
             <tbody>
