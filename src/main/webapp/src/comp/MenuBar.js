@@ -18,7 +18,7 @@ const MenuBar = () => {
     const number = posts.length
 
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
                 <Navbar.Brand>Postmanager</Navbar.Brand>
                 <Nav className="mt-auto">
