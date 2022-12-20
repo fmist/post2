@@ -35,7 +35,7 @@ const InputBar = () => {
         <Form
             onSubmit={formik.handleSubmit}
             noValidate
-            className="container mt-2"
+            className="container mt-2 w-50"
         >
             <InputGroup hasValidation>
                 <Form.Control
