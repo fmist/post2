@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin("http://192.168.0.102:3000/")
+@CrossOrigin("http://localhost:3000/")
 public class PostController {
 
     private final PostRepository postRepository;
@@ -28,7 +28,7 @@ public class PostController {
     @PostMapping("/add")
     ResponseEntity<PostResponse> addPost(@Valid @RequestBody Post postRequest) {
         postRepository.save(postRequest);
-        return ResponseEntity.ok(new PostResponse("Success !"));
+        return ResponseEntity.ok(new PostResponse("Success!"));
     }
 
     @PostMapping("/delete/{id}")
