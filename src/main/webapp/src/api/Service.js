@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export default class Service {
+
     static request = axios.create({baseURL: "http://192.168.0.104:8081"})
 
     static deletePost = async (id) => {
