@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+        PATH = "/usr/local/bin/docker-compose"
+    }
     tools {
         gradle "gradle"
     }

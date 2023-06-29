@@ -6,9 +6,6 @@ services:
       dockerfile: Dockerfile
     image: 'backend'
     environment:
-#      SPRING_DATASOURCE_URL: jdbc:mysql://sql.freedb.tech:3306/freedb_post_database
-#      SPRING_DATASOURCE_USERNAME: freedb_post_admin
-#      SPRING_DATASOURCE_PASSWORD: ?S5v6bx7g59$P8y
           SPRING_DATASOURCE_URL: jdbc:mysql://sql8.freesqldatabase.com:3306/sql8629573
           SPRING_DATASOURCE_USERNAME: sql8629573
           SPRING_DATASOURCE_PASSWORD: 4dEmJyc6Wx
