@@ -29,6 +29,6 @@ dependencies {
     testImplementation 'io.rest-assured:rest-assured:4.3.1'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
-}
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}
