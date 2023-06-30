@@ -28,7 +28,6 @@ const InputBar = () => {
         onSubmit: values => {
             Service.addPost(values)
             navigate("/")
-            window.location.reload()
         },
     });
 

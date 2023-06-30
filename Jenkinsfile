@@ -17,7 +17,7 @@ pipeline {
 
         stage('Build project by gradle') {
             steps {
-                sh "gradle clean build -DskipTests"
+                sh "gradle clean build"
             }
         }
 

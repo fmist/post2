@@ -25,7 +25,7 @@ const MenuBar = () => {
                     <Nav.Link href="/">Posts</Nav.Link>
                     <Nav.Link href="/about">About</Nav.Link>
                     <Nav.Link href="/add">New post</Nav.Link>
-                    <Nav.Link style={{color: "aquamarine"}}>You have {number} posts</Nav.Link>
+                    <Nav.Link style={{color: "aqua"}}>You have {number} posts</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
