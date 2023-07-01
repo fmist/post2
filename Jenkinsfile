@@ -26,7 +26,7 @@ pipeline {
                 DB_DATA = credentials('MYSQL_DATABASE')
              }
              steps {
-               sh "docker-compose up -e ${DB_DATA} -d --wait --build"
+               sh "docker-compose up --USER=${DB_DATA_USER} --PASSWORD=${DB_DATA_PASSWORD} -d --wait --build"
              }
         }
     }
