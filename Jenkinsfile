@@ -9,21 +9,24 @@ pipeline {
 
     stages {
 
-        stage('Get project from github') {
+        stage('Get project') {
             steps {
                 git 'https://github.com/fmist/post2.git'
             }
         }
 
-        stage('Build project by gradle') {
+        stage('Build') {
             steps {
-                sh "gradle clean build -DskipTests"
+                sh "gradle clean build -D skipTests"
             }
         }
 
-        stage('deploy') {
+        stage('Deploy') {
+             environment {
+                DB_DATA = credentials('MYSQL_DATABASE')
+             }
              steps {
-               sh "docker-compose up -d --wait --build"
+               sh "docker-compose up -e ${DB_DATA} -d --wait --build"
              }
         }
     }
