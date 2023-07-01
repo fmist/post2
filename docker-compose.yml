@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     image: 'backend'
     environment:
-          SPRING_DATASOURCE_URL: jdbc:mysql://sql8.freesqldatabase.com:3306/sql8629573
+          SPRING_DATASOURCE_URL: jdbc:mysql://db4free.net:3306/postmanager_db
           SPRING_DATASOURCE_USERNAME: ${USER}
           SPRING_DATASOURCE_PASSWORD: ${PASSWORD}
     ports:
