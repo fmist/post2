@@ -5,8 +5,6 @@ import com.fmist.post.models.PostResponse;
 import com.fmist.post.repositories.PostRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
 import javax.validation.Valid;
 import java.util.List;
 

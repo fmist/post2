@@ -23,7 +23,8 @@ pipeline {
 
         stage('Deploy') {
              environment {
-                DB_DATA = credentials('MYSQL_DATABASE')
+//                 DB_DATA = credentials('MYSQL_DATABASE')
+                DB_DATA = credentials('db4free')
              }
              steps {
                sh "USER=${DB_DATA_USR} PASSWORD=${DB_DATA_PSW} docker-compose up -d --wait --build"
