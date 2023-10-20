@@ -7,10 +7,10 @@ services:
     image: 'backend'
     environment:
           SPRING_DATASOURCE_URL: jdbc:mysql://db4free.net:3306/postmanager_db
-          SPRING_DATASOURCE_USERNAME: ${USER}
-          SPRING_DATASOURCE_PASSWORD: ${PASSWORD}
+          SPRING_DATASOURCE_USERNAME: postmanager_data
+          SPRING_DATASOURCE_PASSWORD: ads778899
     ports:
-      - "8081:8081"
+      - "8082:8082"
 
   react:
     build:
